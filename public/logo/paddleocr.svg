@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <path fill="#0062B0" d="M64 16c26.5 0 48 21.5 48 48S90.5 112 64 112 16 90.5 16 64 37.5 16 64 16zm0-8C33.1 8 8 33.1 8 64s25.1 56 56 56 56-25.1 56-56S94.9 8 64 8z"/>
+  <path fill="#0062B0" d="M48 48h32v8H56v16h24v8H48V48z"/>
+  <text x="64" y="90" fill="#0062B0" font-family="Arial" font-size="14" text-anchor="middle" font-weight="bold">OCR</text>
+</svg>

@@ -1,84 +1,82 @@
 import { IProject } from '@/types';
 
 export const GENERAL_INFO = {
-    email: 'tasmirolislam@gmail.com',
+    email: 'ankitsneh03@gmail.com',
 
-    emailSubject: "Let's collaborate on a project",
-    emailBody: 'Hi Tajmirul, I am reaching out to you because...',
+    emailSubject: "Let's collaborate on an AI/ML project",
+    emailBody: 'Hi Ankit, I am reaching out to you because...',
 
-    oldPortfolio: 'https://www.legacy.me.toinfinite.dev',
-    upworkProfile: 'https://www.upwork.com/freelancers/tajmirul',
+    linkedIn: 'https://www.linkedin.com/in/ankitsneh/',
 };
 
 export const SOCIAL_LINKS = [
-    { name: 'github', url: 'https://github.com/Tajmirul' },
-    { name: 'linkedin', url: 'https://www.linkedin.com/in/tajmirul' },
-    { name: 'facebook', url: 'https://www.facebook.com/tajmirul.2000' },
-    { name: 'Old Version', url: GENERAL_INFO.oldPortfolio },
+    { name: 'linkedin', url: 'https://www.linkedin.com/in/ankitsneh/' },
 ];
 
 export const MY_STACK = {
-    frontend: [
+    'AI/ML': [
         {
-            name: 'JavaScript',
-            icon: '/logo/js.png',
+            name: 'Python',
+            icon: '/logo/python.svg',
         },
         {
-            name: 'TypeScript',
-            icon: '/logo/ts.png',
+            name: 'TensorFlow',
+            icon: '/logo/tensorflow.svg',
         },
         {
-            name: 'React',
-            icon: '/logo/react.png',
+            name: 'PyTorch',
+            icon: '/logo/pytorch.svg',
         },
         {
-            name: 'Next.js',
-            icon: '/logo/next.png',
+            name: 'LangChain',
+            icon: '/logo/langchain.svg',
         },
         {
-            name: 'Redux',
-            icon: '/logo/redux.png',
+            name: 'PaddleOCR',
+            icon: '/logo/paddleocr.svg',
         },
         {
-            name: 'Tailwind CSS',
-            icon: '/logo/tailwind.png',
-        },
-        {
-            name: 'GSAP',
-            icon: '/logo/gsap.png',
-        },
-        {
-            name: 'Framer Motion',
-            icon: '/logo/framer-motion.png',
-        },
-        {
-            name: 'Sass',
-            icon: '/logo/sass.png',
-        },
-        {
-            name: 'Bootstrap',
-            icon: '/logo/bootstrap.svg',
+            name: 'Streamlit',
+            icon: '/logo/streamlit.svg',
         },
     ],
-    backend: [
+    'DevOps/Cloud': [
+        {
+            name: 'Docker',
+            icon: '/logo/docker.svg',
+        },
+        {
+            name: 'Kubernetes',
+            icon: '/logo/kubernetes.svg',
+        },
+        {
+            name: 'AWS',
+            icon: '/logo/aws.png',
+        },
+        {
+            name: 'Git',
+            icon: '/logo/git.png',
+        },
+    ],
+    Backend: [
+        {
+            name: 'Flask',
+            icon: '/logo/flask.svg',
+        },
+        {
+            name: 'Socket.IO',
+            icon: '/logo/socketio.svg',
+        },
+        {
+            name: 'SQLAlchemy',
+            icon: '/logo/sqlalchemy.svg',
+        },
         {
             name: 'Node.js',
             icon: '/logo/node.png',
         },
-        {
-            name: 'NestJS',
-            icon: '/logo/nest.svg',
-        },
-        {
-            name: 'Express.js',
-            icon: '/logo/express.png',
-        },
     ],
-    database: [
-        {
-            name: 'MySQL',
-            icon: '/logo/mysql.svg',
-        },
+    Database: [
         {
             name: 'PostgreSQL',
             icon: '/logo/postgreSQL.png',
@@ -88,221 +86,144 @@ export const MY_STACK = {
             icon: '/logo/mongodb.svg',
         },
         {
-            name: 'Prisma',
-            icon: '/logo/prisma.png',
-        },
-    ],
-    tools: [
-        {
-            name: 'Git',
-            icon: '/logo/git.png',
-        },
-        {
-            name: 'Docker',
-            icon: '/logo/docker.svg',
-        },
-        {
-            name: 'AWS',
-            icon: '/logo/aws.png',
+            name: 'MySQL',
+            icon: '/logo/mysql.svg',
         },
     ],
 };
 
 export const PROJECTS: IProject[] = [
     {
-        title: 'Electro EV',
-        slug: 'electro-ev',
-        liveUrl: 'https://electroev.co.uk/',
+        title: 'AI Industrial Pipeline',
+        slug: 'ai-industrial-pipeline',
+        liveUrl: '#',
         year: 2025,
         description: `
-      A complete agency portfolio platform built for Electro EV to showcase their services, blog content, and product offerings. <br/> <br/>
+      An integrated AI pipeline for industrial factory environments combining deep learning vision models, LLMs, and multimodal AI. <br/> <br/>
       
       Key Features:<br/>
       <ul>
-        <li>🛠️ Service Display System: Interactive service showcase with synchronized sliders</li>
-        <li>✍️ Blog Management: SEO-friendly blog with categorization and search</li>
-        <li>🛒 Product Catalog: Organized product display with filtering capabilities</li>
-        <li>📱 Fully Responsive: Optimized for all device sizes</li>
-        <li>⚡ Fast Performance: Optimized Next.js frontend with ISR (Incremental Static Regeneration)</li>
+        <li>🤖 Multi-Model Integration: Deep learning vision, LLMs, SLMs, and multimodal AI</li>
+        <li>⚡ Real-Time Processing: Async-first architecture for high-throughput inference</li>
+        <li>📊 PaddleOCR Integration: Intelligent text extraction from industrial machines</li>
+        <li>🔄 LangChain Orchestration: Complex AI workflow management</li>
+        <li>📱 Streamlit Interfaces: Cross-team collaboration dashboards</li>
       </ul><br/>
       
       Technical Highlights:
       <ul>
-        <li>Implemented complex slider synchronization logic using Swiper.js</li>
-        <li>Customized Payload CMS admin panel for intuitive content management</li>
-        <li>Developed reusable UI components with shadcn for design consistency</li>
-        <li>Configured efficient data fetching strategies in Next.js</li>
+        <li>Designed async-first architecture for real-time decision-making in production</li>
+        <li>Built robust preprocessing pipeline for diverse text formats</li>
+        <li>Developed interactive GUIs for ML model interaction and data visualization</li>
+        <li>Achieved reliable extraction under varying industrial conditions</li>
       </ul>
       `,
         role: `
-      Full-Stack Developer <br/>
-      Owned the entire development lifecycle:
+      MLOps & Backend Developer <br/>
+      Owned the entire ML pipeline deployment:
       <ul>
-        <li>✅ Backend: Configured Payload CMS with custom collections for services, blogs, and products</li>
-        <li>🎨 Frontend: Built all UI components using Tailwind CSS and shadcn</li>
-        <li>🔄 State Management: Implemented client-side data fetching and caching</li>
-        <li>🖥️ CMS Customization: Created admin interfaces for content editors</li>
-        <li>🚀 Deployment: Set up CI/CD pipeline for Vercel hosting</li>
-        <li>🧩 Third-Party Integration: Added Swiper.js for interactive sliders</li>
+        <li>✅ AI Integration: Combined vision models, LLMs, SLMs with LangChain</li>
+        <li>🏭 On-Site Deployment: Managed production deployment in factory environment</li>
+        <li>⚡ Performance: Designed async architecture for high-throughput inference</li>
+        <li>🖥️ Interfaces: Built Streamlit dashboards for cross-team collaboration</li>
+        <li>📝 OCR Pipeline: Integrated PaddleOCR for automated text extraction</li>
       </ul>
       `,
         techStack: [
-            'Next.js',
-            'Payload CMS',
-            'Tailwind CSS',
-            'shadcn',
-            'Swiper.js',
-            'React Hook Form',
-            'Vercel',
+            'Python',
+            'TensorFlow',
+            'LangChain',
+            'PaddleOCR',
+            'Streamlit',
+            'Docker',
         ],
-        thumbnail: '/projects/thumbnail/mti-electronics.webp',
-        longThumbnail: '/projects/long/mti-electronics.webp',
+        thumbnail: '/projects/thumbnail/ai-pipeline.webp',
+        longThumbnail: '/projects/long/ai-pipeline.webp',
         images: [
-            '/projects/images/mti-electronics-1.webp',
-            '/projects/images/mti-electronics-2.webp',
+            '/projects/images/ai-pipeline-1.webp',
+            '/projects/images/ai-pipeline-2.webp',
         ],
     },
     {
-        title: 'Epikcart',
-        slug: 'epikcart',
+        title: 'Workflow Management System',
+        slug: 'workflow-management',
         techStack: [
-            'React',
-            'Redux',
-            'React i18n',
-            'Tailwind CSS',
-            'Framer Motion',
-            'debouncing',
-            'Api Integration',
+            'Python',
+            'Flask',
+            'SQLAlchemy',
+            'Socket.IO',
+            'PostgreSQL',
+            'Docker',
         ],
-        thumbnail: '/projects/thumbnail/epikcart.jpg',
-        longThumbnail: '/projects/long/epikcart.jpg',
+        thumbnail: '/projects/thumbnail/workflow-system.webp',
+        longThumbnail: '/projects/long/workflow-system.webp',
         images: [
-            '/projects/images/epikcart-1.png',
-            '/projects/images/epikcart-2.png',
-            '/projects/images/epikcart-3.png',
-            '/projects/images/epikcart-4.png',
-            '/projects/images/epikcart-5.png',
+            '/projects/images/workflow-1.webp',
+            '/projects/images/workflow-2.webp',
         ],
-        liveUrl: 'https://demo.epikcart.siphertech.com/',
-        year: 2023,
-        description: `Epikcart is a feature-rich, scalable e-commerce platform tailored for large businesses. It features dynamic product filtering, multi-language support with RTL, advanced inventory management, order tracking, and refund systems, offering a comprehensive solution for multi-vendor operations.`,
-        role: `As the frontend developer in a team of five, I: <br/>
-        - Built the frontend from scratch using React, Redux, RTK Query, and Tailwind CSS.<br/>
-        - Developed dynamic filtering logic for the product search page with admin-configurable parameters.<br/>
-        - Integrated multi-language support with React i18n, including RTL handling.<br/>
-        - Delivered a responsive, user-friendly interface in collaboration with the UI/UX designer.`,
-    },
-    {
-        title: 'Resume Roaster',
-        slug: 'resume-roaster',
-        techStack: [
-            'GPT-4',
-            'Next.js',
-            'Postgressql',
-            'Prisma',
-            'Tailwind CSS',
-        ],
-        thumbnail: '/projects/thumbnail/resume-roaster.jpg',
-        longThumbnail: '/projects/long/resume-roaster.jpg',
-        images: [
-            '/projects/images/resume-roaster-1.png',
-            '/projects/images/resume-roaster-2.png',
-            '/projects/images/resume-roaster-3.png',
-        ],
-        liveUrl: 'https://resume-roaster.vercel.app/',
-        year: 2023,
-        description:
-            'Resume Roaster is a web application designed to provide tailored resume feedback and professional writing services. Built with Next.js, PostgreSQL, Prisma, and Tailwind CSS, it integrates GPT-4 for AI-powered recommendations. The platform also includes peer-to-peer reviews with a points-based system, fostering a collaborative and engaging experience. Targeting freshers, experienced professionals, and programmers, it helps optimize resumes for job-specific success.',
-        role: `As the sole developer and business owner, I:<br/>
-        - Designed and developed the platform end-to-end using Next.js, PostgreSQL, Prisma, and Tailwind CSS.<br/>
-        - Integrated GPT-4 for AI-driven feedback and insights.<br/>
-        - Implemented complex SQL queries, including one to identify the top two resumes based on user points.`,
-    },
-    {
-        title: 'Real Estate',
-        slug: 'property-pro',
-        techStack: [
-            'React.js',
-            'Redux',
-            'Tailwind CSS',
-            'React i18n',
-            'Framer Motion',
-        ],
-        thumbnail: '/projects/thumbnail/property-pro.jpg',
-        longThumbnail: '/projects/long/property-pro.jpg',
-        images: [
-            '/projects/images/property-pro-1.png',
-            '/projects/images/property-pro-2.png',
-            '/projects/images/property-pro-3.png',
-        ],
-        liveUrl: 'https://demo.propertypro.siphertech.com/',
-        year: 2023,
-        description:
-            'PropertyPro is a real estate management platform offering users a seamless experience to explore, manage, and view property listings. The application emphasizes accessibility and responsive design, ensuring a smooth interface across devices.',
-        role: `As the frontend developer, I:<br/>
-        - Built the frontend using React, Redux, RTK Query, Framer Motion, and Tailwind CSS.<br/>
-        - Integrated dynamic state management for efficient handling of property data.<br/>
-        - Implemented multi-language support with React i18n to cater to diverse audiences.<br/>
-        - Enhanced user interaction with animations and transitions using Framer Motion.`,
-    },
-    {
-        title: 'Consulting Finance',
-        slug: 'crenotive',
-        techStack: ['HTML', 'CSS & SCSS', 'Javascript', 'Bootstrap'],
-        thumbnail: '/projects/thumbnail/consulting-finance.jpg',
-        longThumbnail: '/projects/long/consulting-finance.jpg',
-        images: [
-            '/projects/images/consulting-finance-1.png',
-            '/projects/images/consulting-finance-2.png',
-            '/projects/images/consulting-finance-3.png',
-        ],
-        sourceCode: 'https://github.com/Tajmirul/crenotive',
-        liveUrl: 'https://crenotive.netlify.app/',
-        year: 2023,
-        description:
-            'I developed Crenotive, a portfolio website using Html, SASS, and jQuery to showcase services and expertise. The design focuses on responsive user experience and effective presentation of professional achievements.',
-        role: ``,
-    },
-    {
-        title: 'devLinks',
-        slug: 'devLinks',
-        techStack: ['Next.js', 'Formik', 'Drag & Drop', 'Tailwind CSS'],
-        thumbnail: '/projects/thumbnail/devLinks.jpg',
-        longThumbnail: '/projects/long/devLinks.jpg',
-        images: [
-            '/projects/images/devLinks-1.png',
-            '/projects/images/devLinks-2.png',
-            '/projects/images/devLinks-3.png',
-        ],
-        sourceCode: 'https://github.com/Tajmirul/devsLink',
-        liveUrl: 'https://devlinks-demo.vercel.app/auth/signin',
-        year: 2023,
-        description: `One of the most challenging projects in Frontend Mentor.<br/><br/>
+        liveUrl: '#',
+        year: 2024,
+        description: `A scalable workflow management system handling over 20,000 records monthly with event-driven asynchronous processing for real-time updates.<br/><br/>
 
-            I developed a LinkSharing App as part of the Frontend Mentor challenge, utilizing React, Redux, and Tailwind CSS to create a responsive and feature-rich platform. The app allows users to share, save, and explore links, with a focus on intuitive design and smooth navigation. Advanced state management ensures efficient data handling for user interactions.`,
-        role: ``,
+        Key Achievements:<br/>
+        <ul>
+          <li>📈 Scale: Handles 20,000+ records monthly</li>
+          <li>⚡ Performance: 40% reduction in query overhead</li>
+          <li>✅ Reliability: 99.9%+ data integrity maintained</li>
+          <li>🔄 Real-Time: Event-driven async processing with Socket.IO</li>
+        </ul>`,
+        role: `As the Backend Developer, I:<br/>
+        - Built the complete backend using Python, Flask, and SQLAlchemy<br/>
+        - Implemented event-driven architecture with Socket.IO for real-time updates<br/>
+        - Optimized database queries achieving 40% reduction in overhead<br/>
+        - Ensured 99.9%+ data integrity across all operations`,
+    },
+    {
+        title: 'Quantitative Research Platform',
+        slug: 'quant-research',
+        techStack: [
+            'Python',
+            'Data Analysis',
+            'Statistical Modeling',
+            'Machine Learning',
+        ],
+        thumbnail: '/projects/thumbnail/quant-research.webp',
+        longThumbnail: '/projects/long/quant-research.webp',
+        images: [
+            '/projects/images/quant-1.webp',
+            '/projects/images/quant-2.webp',
+        ],
+        liveUrl: '#',
+        year: 2024,
+        description: `Research and development of quantitative models and alpha signals for financial markets at WorldQuant.<br/><br/>
+
+        Focus Areas:<br/>
+        <ul>
+          <li>📊 Statistical Analysis: Advanced data analysis and modeling</li>
+          <li>🤖 Machine Learning: ML-based signal generation</li>
+          <li>📈 Quantitative Research: Alpha discovery and validation</li>
+        </ul>`,
+        role: `As a Research Consultant, I:<br/>
+        - Developed and validated quantitative trading signals<br/>
+        - Applied machine learning techniques for alpha generation<br/>
+        - Conducted statistical analysis on large financial datasets`,
     },
 ];
 
 export const MY_EXPERIENCE = [
     {
-        title: 'Software Engineer (Frontend)',
-        company: 'Strativ AB',
-        duration: 'Dec 2024 - Present',
+        title: 'DevOps Intern',
+        company: 'Battery Smart',
+        duration: 'Dec 2025 - Present',
     },
     {
-        title: 'Frontend Developer',
-        company: 'Epikcoders',
-        duration: 'Oct 2023 - Nov 2024',
+        title: 'Research Consultant',
+        company: 'WorldQuant',
+        duration: 'Apr 2024 - Present',
     },
     {
-        title: 'Frontend Engineer',
-        company: 'Anchorblock Technology',
-        duration: 'Oct 2022 - Sep 2023',
-    },
-    {
-        title: 'Frontend Developer (Part-time)',
-        company: 'Branex IT',
-        duration: 'Jan 2022 - Oct 2022',
+        title: 'MLOps | Backend Developer',
+        company: 'BrandContext',
+        duration: 'Sep 2024 - Jan 2026',
     },
 ];

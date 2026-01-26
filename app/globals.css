@@ -4,33 +4,38 @@
 
 @layer base {
     :root {
-        --background: 0 0% 13%;
-        --background-light: 0 0% 19%;
-        --foreground: 0 0% 87%;
+        --background: 260 30% 8%;
+        --background-light: 260 25% 14%;
+        --foreground: 0 0% 90%;
 
-        --card: 0 0% 3.9%;
+        --card: 260 30% 6%;
         --card-foreground: 0 0% 98%;
-        --popover: 0 0% 3.9%;
+        --popover: 260 30% 6%;
         --popover-foreground: 0 0% 98%;
 
-        --primary: 140 100% 47%;
-        --primary-foreground: 0 0% 13%;
-        --secondary: 193 100% 47%;
-        --secondary-foreground: 0 0% 13%;
-        --muted: 0 0% 14.9%;
-        --muted-foreground: 0 0% 71%;
-        --accent: 0 0% 14.9%;
+        --primary: 270 80% 65%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 280 70% 75%;
+        --secondary-foreground: 260 30% 10%;
+        --muted: 260 20% 18%;
+        --muted-foreground: 260 10% 65%;
+        --accent: 270 60% 25%;
         --accent-foreground: 0 0% 98%;
         --destructive: 0 62.8% 30.6%;
         --destructive-foreground: 0 0% 98%;
-        --border: 0 0% 24%;
-        --input: 0 0% 14.9%;
-        --ring: 0 0% 83.1%;
-        --chart-1: 220 70% 50%;
-        --chart-2: 160 60% 45%;
-        --chart-3: 30 80% 55%;
-        --chart-4: 280 65% 60%;
-        --chart-5: 340 75% 55%;
+        --border: 260 20% 22%;
+        --input: 260 20% 15%;
+        --ring: 270 80% 70%;
+        --chart-1: 270 70% 60%;
+        --chart-2: 280 60% 55%;
+        --chart-3: 45 80% 60%;
+        --chart-4: 260 65% 60%;
+        --chart-5: 290 75% 55%;
+        
+        /* Star glow colors */
+        --star-white: 0 0% 100%;
+        --star-violet: 270 80% 80%;
+        --star-gold: 45 100% 70%;
     }
 }
 
@@ -53,5 +58,48 @@
 
     .markdown-text ul {
         @apply pl-5 mt-2 list-disc;
+    }
+    
+    /* Star glow effects */
+    .glow-star {
+        box-shadow: 0 0 4px 1px currentColor;
+    }
+    
+    .glow-star-lg {
+        box-shadow: 0 0 8px 2px currentColor;
+    }
+    
+    .glow-purple {
+        box-shadow: 0 0 20px 5px hsl(var(--primary) / 0.4);
+    }
+    
+    .glow-purple-sm {
+        box-shadow: 0 0 10px 2px hsl(var(--primary) / 0.3);
+    }
+    
+    /* AI Mode button glow animation */
+    @keyframes pulse-glow {
+        0%, 100% {
+            box-shadow: 0 0 15px 3px hsl(var(--primary) / 0.4);
+        }
+        50% {
+            box-shadow: 0 0 25px 8px hsl(var(--primary) / 0.6);
+        }
+    }
+    
+    .animate-pulse-glow {
+        animation: pulse-glow 2s ease-in-out infinite;
+    }
+    
+    /* AI Mode click effect animation */
+    @keyframes clickPulse {
+        0% {
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translate(-50%, -50%) scale(2);
+            opacity: 0;
+        }
     }
 }

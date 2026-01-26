@@ -42,26 +42,28 @@ const Preloader = () => {
 
     return (
         <div className="fixed inset-0 z-[6] flex" ref={preloaderRef}>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
-            <div className="preloader-item h-full w-[10%] bg-black"></div>
+            <div className="preloader-item h-full w-[10%] bg-gradient-to-b from-[#1a0a2e] via-[#4c1d95] to-[#7c3aed]"></div>
+            <div className="preloader-item h-full w-[10%] bg-gradient-to-b from-[#1a0a2e] via-[#5b21b6] to-[#8b5cf6]"></div>
+            <div className="preloader-item h-full w-[10%] bg-gradient-to-b from-[#1a0a2e] via-[#6d28d9] to-[#a78bfa]"></div>
+            <div className="preloader-item h-full w-[10%] bg-gradient-to-b from-[#1a0a2e] via-[#7c3aed] to-[#c4b5fd]"></div>
+            <div className="preloader-item h-full w-[10%] bg-gradient-to-b from-[#1a0a2e] via-[#8b5cf6] to-[#ddd6fe]"></div>
+            <div className="preloader-item h-full w-[10%] bg-gradient-to-b from-[#1a0a2e] via-[#8b5cf6] to-[#ddd6fe]"></div>
+            <div className="preloader-item h-full w-[10%] bg-gradient-to-b from-[#1a0a2e] via-[#7c3aed] to-[#c4b5fd]"></div>
+            <div className="preloader-item h-full w-[10%] bg-gradient-to-b from-[#1a0a2e] via-[#6d28d9] to-[#a78bfa]"></div>
+            <div className="preloader-item h-full w-[10%] bg-gradient-to-b from-[#1a0a2e] via-[#5b21b6] to-[#8b5cf6]"></div>
+            <div className="preloader-item h-full w-[10%] bg-gradient-to-b from-[#1a0a2e] via-[#4c1d95] to-[#7c3aed]"></div>
 
-            <p className="name-text flex text-[20vw] lg:text-[200px] font-anton text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 leading-none overflow-hidden">
-                <span className="inline-block translate-y-full">T</span>
+            <p className="name-text flex text-[15vw] lg:text-[160px] font-anton text-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 leading-none overflow-hidden text-white drop-shadow-[0_0_30px_rgba(139,92,246,0.8)]">
                 <span className="inline-block translate-y-full">A</span>
-                <span className="inline-block translate-y-full">J</span>
-                <span className="inline-block translate-y-full">M</span>
+                <span className="inline-block translate-y-full">N</span>
+                <span className="inline-block translate-y-full">K</span>
                 <span className="inline-block translate-y-full">I</span>
-                <span className="inline-block translate-y-full">R</span>
-                <span className="inline-block translate-y-full">U</span>
-                <span className="inline-block translate-y-full">L</span>
+                <span className="inline-block translate-y-full">T</span>
+                <span className="inline-block translate-y-full mx-4"> </span>
+                <span className="inline-block translate-y-full">S</span>
+                <span className="inline-block translate-y-full">N</span>
+                <span className="inline-block translate-y-full">E</span>
+                <span className="inline-block translate-y-full">H</span>
             </p>
         </div>
     );

@@ -2,6 +2,7 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import Image from 'next/image';
 import React from 'react';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -55,36 +56,58 @@ const AboutMe = () => {
         <section className="pb-section" id="about-me">
             <div className="container" ref={container}>
                 <h2 className="text-4xl md:text-6xl font-thin mb-20 slide-up-and-fade">
-                    I believe in a user centered design approach, ensuring that
-                    every project I work on is tailored to meet the specific
-                    needs of its users.
+                    I believe in building AI systems that are not just
+                    intelligent, but reliable, scalable, and ready for
+                    real-world production environments.
                 </h2>
 
                 <p className="pb-3 border-b text-muted-foreground slide-up-and-fade">
                     This is me.
                 </p>
 
-                <div className="grid md:grid-cols-12 mt-9">
-                    <div className="md:col-span-5">
-                        <p className="text-5xl slide-up-and-fade">
-                            Hi, I&apos;m Tajmirul.
-                        </p>
+                <div className="grid md:grid-cols-12 mt-9 gap-8">
+                    {/* Profile Picture */}
+                    <div className="md:col-span-4 slide-up-and-fade">
+                        <div className="relative w-full max-w-[280px] aspect-square rounded-2xl overflow-hidden border-2 border-violet-500/30 glow-purple-sm bg-gradient-to-br from-violet-600/30 to-purple-900/50">
+                            {/* Add your photo at /public/profile.jpeg */}
+                            <Image
+                                src="/profile.jpeg"
+                                alt="Ankit Sneh"
+                                fill
+                                className="object-cover"
+                                priority
+                                onError={(e) => {
+                                    // Hide broken image
+                                    e.currentTarget.style.display = 'none';
+                                }}
+                            />
+                            {/* Gradient overlay */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-violet-600/10 to-purple-900/20 pointer-events-none" />
+                        </div>
                     </div>
-                    <div className="md:col-span-7">
-                        <div className="text-lg text-muted-foreground max-w-[450px]">
+                    
+                    {/* Content */}
+                    <div className="md:col-span-8">
+                        <p className="text-5xl slide-up-and-fade mb-6">
+                            Hi, I&apos;m Ankit Sneh.
+                        </p>
+                        <div className="text-lg text-muted-foreground max-w-[500px]">
                             <p className="slide-up-and-fade">
-                                I&apos;m a frontend web developer dedicated to
-                                turning ideas into creative solutions. I
-                                specialize in creating seamless and intuitive
-                                user experiences.
+                                I&apos;m an AI/ML Engineer and DevOps
+                                specialist passionate about bridging the gap
+                                between experimental AI and production-ready
+                                systems. I specialize in deploying deep
+                                learning models, LLMs, and multimodal AI in
+                                industrial environments.
                             </p>
                             <p className="mt-3 slide-up-and-fade">
-                                My approach focuses on creating scalable,
-                                high-performing solutions tailored to both user
-                                needs and business objectives. By prioritizing
-                                performance, accessibility, and responsiveness,
-                                I strive to deliver experiences that not only
-                                engage users but also drive tangible results.
+                                My approach combines MLOps best practices with
+                                scalable backend architecture. From building
+                                async-first pipelines handling 20,000+ records
+                                monthly to integrating PaddleOCR and LangChain
+                                for intelligent automation, I focus on
+                                solutions that deliver real business impact
+                                with 99.9%+ reliability.
                             </p>
                         </div>
                     </div>

@@ -13,6 +13,8 @@ import Preloader from '../components/Preloader';
 import StickyEmail from './_components/StickyEmail';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import Script from 'next/script';
+import { AIModeProvider } from '@/contexts/AIModeContext';
+import AIMode from '@/components/AIMode';
 
 const antonFont = Anton({
     weight: '400',
@@ -29,8 +31,8 @@ const robotoFlex = Roboto_Flex({
 });
 
 export const metadata: Metadata = {
-    title: 'Portfolio - Tajmirul Islam',
-    description: 'Personal portfolio of Tajmirul Islam',
+    title: 'Ankit Sneh | AI/ML Engineer & DevOps',
+    description: 'AI/ML Engineer and DevOps specialist building production ML pipelines, deploying AI systems at scale, and crafting intelligent automation solutions.',
 };
 
 export default function RootLayout({
@@ -54,32 +56,35 @@ export default function RootLayout({
             <body
                 className={`${antonFont.variable} ${robotoFlex.variable} antialiased`}
             >
-                <ReactLenis
-                    root
-                    options={{
-                        lerp: 0.1,
-                        duration: 1.4,
-                    }}
-                >
-                    {/* <a
-                        href="https://forms.gle/t73XYJgWD5cJNr6e8"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-4 block bg-black text-center z-[1] text-sm py-2 hover:text-primary transition-all"
+                <AIModeProvider>
+                    <ReactLenis
+                        root
+                        options={{
+                            lerp: 0.1,
+                            duration: 1.4,
+                        }}
                     >
-                        Frontend dev? I&apos;ll help you polish your resume —
-                        completely free.
-                    </a> */}
-                    <Navbar />
-                    <main>{children}</main>
-                    <Footer />
+                        {/* <a
+                            href="https://forms.gle/t73XYJgWD5cJNr6e8"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-4 block bg-black text-center z-[1] text-sm py-2 hover:text-primary transition-all"
+                        >
+                            Frontend dev? I&apos;ll help you polish your resume —
+                            completely free.
+                        </a> */}
+                        <Navbar />
+                        <main>{children}</main>
+                        <Footer />
 
-                    <CustomCursor />
-                    <Preloader />
-                    <ScrollProgressIndicator />
-                    <ParticleBackground />
-                    <StickyEmail />
-                </ReactLenis>
+                        <CustomCursor />
+                        <Preloader />
+                        <ScrollProgressIndicator />
+                        <ParticleBackground />
+                        <StickyEmail />
+                        <AIMode />
+                    </ReactLenis>
+                </AIModeProvider>
             </body>
         </html>
     );

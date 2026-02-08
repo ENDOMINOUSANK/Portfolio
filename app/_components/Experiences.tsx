@@ -68,6 +68,7 @@ const Experiences = () => {
                             <p className="text-lg text-muted-foreground">
                                 {item.duration}
                             </p>
+                            <p className="mt-3 text-muted-foreground">{item.remark}</p>
                         </div>
                     ))}
                 </div>

@@ -56,13 +56,11 @@ const AboutMe = () => {
         <section className="pb-section" id="about-me">
             <div className="container" ref={container}>
                 <h2 className="text-4xl md:text-6xl font-thin mb-20 slide-up-and-fade">
-                    I believe in building AI systems that are not just
-                    intelligent, but reliable, scalable, and ready for
-                    real-world production environments.
+                    I believe in building AI systems that are not just intelligent, but reliable, scalable, and ready for real-world production environments (i.e., they don't crash when more than 3 people use them).
                 </h2>
 
                 <p className="pb-3 border-b text-muted-foreground slide-up-and-fade">
-                    This is me.
+                    This is me(on a normal day).
                 </p>
 
                 <div className="grid md:grid-cols-12 mt-9 gap-8">
@@ -101,13 +99,7 @@ const AboutMe = () => {
                                 industrial environments.
                             </p>
                             <p className="mt-3 slide-up-and-fade">
-                                My approach combines MLOps best practices with
-                                scalable backend architecture. From building
-                                async-first pipelines handling 20,000+ records
-                                monthly to integrating PaddleOCR and LangChain
-                                for intelligent automation, I focus on
-                                solutions that deliver real business impact
-                                with 99.9%+ reliability.
+                                My approach combines MLOps best practices (read: trying not to break production) with scalable backend architecture.
                             </p>
                         </div>
                     </div>

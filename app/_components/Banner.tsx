@@ -1,16 +1,17 @@
 'use client';
 import ArrowAnimation from '@/components/ArrowAnimation';
 import Button from '@/components/Button';
-import { GENERAL_INFO } from '@/lib/data';
+import ConnectModal from '@/components/ConnectModal';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import React from 'react';
+import React, { useState } from 'react';
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 const Banner = () => {
     const containerRef = React.useRef<HTMLDivElement>(null);
+    const [isConnectModalOpen, setIsConnectModalOpen] = useState(false);
 
     // move the content a little up on scroll
     useGSAP(
@@ -56,10 +57,8 @@ const Banner = () => {
                         solutions.
                     </p>
                     <Button
-                        as="link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        href={GENERAL_INFO.linkedIn}
+                        as="button"
+                        onClick={() => setIsConnectModalOpen(true)}
                         variant="primary"
                         className="mt-9 banner-button slide-up-and-fade"
                     >
@@ -70,28 +69,33 @@ const Banner = () => {
                 <div className="md:absolute bottom-[10%] right-[4%] flex md:flex-col gap-4 md:gap-8 text-center md:text-right">
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            2+
+                            3+
                         </h5>
                         <p className="text-muted-foreground">
-                            Years of Experience
+                            Years of Professional Googling
                         </p>
                     </div>
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            20K+
+                            20+
                         </h5>
                         <p className="text-muted-foreground">
-                            Records Processed Monthly
+                            "Final" Versions pushed
                         </p>
                     </div>
                     <div className="slide-up-and-fade">
                         <h5 className="text-3xl sm:text-4xl font-anton text-primary mb-1.5">
-                            99.9%
+                            404
                         </h5>
-                        <p className="text-muted-foreground">Data Integrity</p>
+                        <p className="text-muted-foreground">Sleep Not Found</p>
                     </div>
                 </div>
             </div>
+
+            <ConnectModal 
+                isOpen={isConnectModalOpen} 
+                onClose={() => setIsConnectModalOpen(false)} 
+            />
         </section>
     );
 };

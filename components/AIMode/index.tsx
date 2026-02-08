@@ -3,7 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useAIMode } from '@/contexts/AIModeContext';
 import AIToggleButton from './AIToggleButton';
 import CameraPermissionModal from './CameraPermissionModal';
-import HandGestureController, { GestureType } from './HandGestureController';
+import HandGestureController, { GestureType, stopCamera } from './HandGestureController';
 import GestureOverlay from './GestureOverlay';
 
 // Hand cursor component
@@ -45,10 +45,16 @@ const AIMode: React.FC = () => {
         if (!showCursor) setShowCursor(true);
     };
 
-    // Hide cursor when AI mode is off
+    // Cleanup when AI mode changes
     useEffect(() => {
         if (state !== 'active') {
+            console.log('[AIMode] State changed to:', state, '- cleaning up');
             setShowCursor(false);
+            setCurrentGesture('none');
+            // Ensure camera is stopped when exiting
+            stopCamera();
+        } else {
+            console.log('[AIMode] State is active');
         }
     }, [state]);
 

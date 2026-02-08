@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
 import { useAIMode } from '@/contexts/AIModeContext';
-import { ArrowUp, ArrowDown, Hand, MousePointerClick, LogOut, Pause } from 'lucide-react';
+import { ArrowUp, ArrowDown, Hand, MousePointerClick, LogOut, Pause, Undo2 } from 'lucide-react';
 
 // Define locally to avoid import issues
-type GestureType = 'none' | 'point_up' | 'point_down' | 'open_palm' | 'pinch' | 'peace';
+type GestureType = 'none' | 'point_up' | 'point_down' | 'open_palm' | 'pinch' | 'peace' | 'three_fingers';
 
 interface GestureOverlayProps {
     currentGesture: GestureType;
@@ -17,6 +17,7 @@ const gestureInfo: Record<GestureType, { icon: React.ReactNode; label: string; c
     open_palm: { icon: <Hand className="w-5 h-5" />, label: 'Paused', color: 'text-yellow-400' },
     pinch: { icon: <MousePointerClick className="w-5 h-5" />, label: 'Click!', color: 'text-blue-400' },
     peace: { icon: <LogOut className="w-5 h-5" />, label: 'Exiting...', color: 'text-red-400' },
+    three_fingers: { icon: <Undo2 className="w-5 h-5" />, label: 'Go Back / Close', color: 'text-orange-400' },
 };
 
 const GestureOverlay: React.FC<GestureOverlayProps> = ({ currentGesture }) => {
@@ -58,6 +59,10 @@ const GestureOverlay: React.FC<GestureOverlayProps> = ({ currentGesture }) => {
                     <div className={`flex items-center gap-2 ${currentGesture === 'pinch' ? 'text-blue-400' : 'text-gray-400'}`}>
                         <MousePointerClick className="w-3 h-3" />
                         <span>👌 Pinch = Click</span>
+                    </div>
+                    <div className={`flex items-center gap-2 ${currentGesture === 'three_fingers' ? 'text-orange-400' : 'text-gray-400'}`}>
+                        <Undo2 className="w-3 h-3" />
+                        <span>🤟 3 Fingers = Go Back / Close</span>
                     </div>
                     <div className={`flex items-center gap-2 ${currentGesture === 'peace' ? 'text-red-400' : 'text-gray-400'}`}>
                         <LogOut className="w-3 h-3" />

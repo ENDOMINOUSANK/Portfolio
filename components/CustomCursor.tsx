@@ -19,9 +19,10 @@ const CustomCursor = () => {
             gsap.to(svgRef.current, {
                 x: clientX,
                 y: clientY,
-                ease: 'power2.out',
-                duration: 0.25,
+                ease: 'power3.out',
+                duration: 0.4,
                 opacity: 1,
+                overwrite: 'auto',
             });
         }) as any;
 

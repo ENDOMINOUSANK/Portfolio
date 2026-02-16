@@ -95,7 +95,7 @@ export const MY_STACK = {
         },
         {
             name: 'Node.js',
-            icon: '/logo/node.png',
+            icon: '/logo/node.svg',
         },
     ],
     Database: [

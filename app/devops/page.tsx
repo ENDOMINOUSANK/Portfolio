@@ -36,7 +36,7 @@ const DevOpsResumePage = () => {
             <div className="flex-1 w-full overflow-hidden bg-black">
                 <iframe
                     src={embedUrl}
-                    className="border-0 origin-top-left scale-[0.85] w-[117.65%] h-[117.65%]"
+                    className="border-0 origin-top-left scale-[0.78] w-[128.21%] h-[128.21%]"
                     title="DevOps Resume"
                     allow="autoplay"
                 />

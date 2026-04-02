@@ -12,7 +12,7 @@ const MLResumePage = () => {
     // Replace with actual Google Drive file ID from your folder
     // Go to your Drive file > Get link > Extract ID from: https://drive.google.com/file/d/{FILE_ID}/view
     const FILE_ID = process.env.NEXT_PUBLIC_ML_RESUME_ID || 'YOUR_ML_RESUME_FILE_ID';
-    const embedUrl = `https://drive.google.com/file/d/${FILE_ID}/preview#zoom=page-fit`;
+    const embedUrl = `https://drive.google.com/uc?export=view&id=${FILE_ID}#zoom=page-width`;
 
     return (
         <div className="w-full h-screen flex flex-col bg-black text-white">

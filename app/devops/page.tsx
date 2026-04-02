@@ -12,7 +12,7 @@ const DevOpsResumePage = () => {
     // Replace with actual Google Drive file ID from your folder
     // Go to your Drive file > Get link > Extract ID from: https://drive.google.com/file/d/{FILE_ID}/view
     const FILE_ID = process.env.NEXT_PUBLIC_DEVOPS_RESUME_ID || 'YOUR_DEVOPS_RESUME_FILE_ID';
-    const embedUrl = `https://drive.google.com/uc?export=view&id=${FILE_ID}#zoom=page-width`;
+    const embedUrl = `https://drive.google.com/file/d/${FILE_ID}/preview`;
 
     return (
         <div className="w-full h-screen flex flex-col bg-black text-white">
@@ -33,10 +33,10 @@ const DevOpsResumePage = () => {
             </div>
 
             {/* PDF Viewer */}
-            <div className="flex-1 w-full overflow-hidden">
+            <div className="flex-1 w-full overflow-hidden bg-black">
                 <iframe
                     src={embedUrl}
-                    className="w-full h-full border-0"
+                    className="border-0 origin-top-left scale-[0.85] w-[117.65%] h-[117.65%]"
                     title="DevOps Resume"
                     allow="autoplay"
                 />

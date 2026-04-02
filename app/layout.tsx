@@ -12,6 +12,8 @@ import CustomCursor from '@/components/CustomCursor';
 import Preloader from '../components/Preloader';
 import StickyEmail from './_components/StickyEmail';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Script from 'next/script';
 import { AIModeProvider } from '@/contexts/AIModeContext';
 import AIMode from '@/components/AIMode';
@@ -43,6 +45,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             <GoogleAnalytics gaId="G-MHLY1LNGY5" />
+            <ApeedInsights />
+            <Snalytics />
             <Script id="hotjar" strategy="afterInteractive">
                 {`(function(h,o,t,j,a,r){
                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};

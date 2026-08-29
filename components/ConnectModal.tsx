@@ -93,14 +93,14 @@ const ConnectModal: React.FC<ConnectModalProps> = ({ isOpen, onClose }) => {
             name: 'GitHub',
             icon: <Github className="w-6 h-6" />,
             href: GENERAL_INFO.github,
-            label: 'github.com/ankitsneh',
+            label: 'github.com/ENDOMINOUSANK',
             color: 'hover:bg-gray-500/20 hover:border-gray-500/50',
         },
         {
             name: 'Linktree',
             icon: <Link2 className="w-6 h-6" />,
             href: GENERAL_INFO.linktree,
-            label: 'linktr.ee/ankitsneh',
+            label: 'linktr.ee/ankitsneh03',
             color: 'hover:bg-green-500/20 hover:border-green-500/50',
         },
     ];

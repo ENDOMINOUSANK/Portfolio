@@ -7,8 +7,8 @@ export const GENERAL_INFO = {
     emailBody: 'Hi Ankit, I am reaching out to you because...',
 
     linkedIn: 'https://www.linkedin.com/in/ankitsneh/',
-    github: 'https://github.com/ankitsneh',
-    linktree: 'https://linktr.ee/ankitsneh',
+    github: 'https://github.com/ENDOMINOUSANK',
+    linktree: 'https://linktr.ee/ankitsneh03',
 };
 
 export const SOCIAL_LINKS = [
@@ -360,7 +360,7 @@ export const PROJECTS: IProject[] = [
 
 export const MY_EXPERIENCE = [
     {
-        title: 'DevOps Intern',
+        title: 'DevOps Engineer - I',
         company: 'Battery Smart',
         duration: 'Dec 2025 - Present',
         remark : 'Chief YAML Wrangler(for Helm especially) & Server Restarter(non-prod)'
